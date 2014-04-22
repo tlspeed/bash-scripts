@@ -1,0 +1,46 @@
+# some more ls aliases 
+alias ll='ls -lh'
+alias la='ls -A'
+alias l='ls -CFh'
+alias cp='cp -p'
+alias grep='grep --color=always'
+alias ssh='ssh -XA'
+alias shs='ssh'
+alias rm='rm -i'
+
+alias h=history
+alias wpd=pwd
+
+alias sqlplus='rlwrap sqlplus'
+alias sqlnx='rlwrap sqlplus bdealey@nxdb'
+alias sqlnxdb='sqlplus bdealey@nxdb'
+alias du1='du -h --max-depth=1'
+
+alias clearlog='> ~/FDfolio/FDfolioData/logs/FDfolioDaily.log'
+alias genpass8="rand | md5sum | base64 | cut -c -8"
+alias genpass16="rand | md5sum | base64 | cut -c -16"
+alias genpass24="rand | md5sum | base64 | cut -c -24"
+
+
+alias kill9='kill -9 '
+what-http-server() { curl -s -I $(for h in "$@"; do printf "http://%s " "$h"; done) | awk -F': ' '/^Server:/ {print $2}'; }
+alias xmlpp='xmllint -format'
+
+alias sd='sqldeveloper.sh'
+alias ns='sudo nvidia-settings'
+
+alias suod='sudo'
+alias sduo=sudo
+
+#alias miser='grep Estimated\ energy\ saved /var/log/syslog | tail -1'rep Estimated\ energy\ saved /var/log/syslog | tail -1
+alias sqlplus='rlwrap /usr/bin/sqlplus64'
+
+alias vcs=cvs
+
+alias fdate="date +%m%d%H%M%Y"
+
+alias yumupdate='sudo yum clean expire-cache; sudo yum -y update; sudo nice cnsi_aide_update.sh'
+alias aideupdate='sudo nice cnsi_aide_update.sh'
+
+alias pcgvpn="snx -s vpn.pcgus.com -p 443 -u bdealey"
+alias updatetime="sudo service ntpd status; sudo service ntpd stop; sudo ntpdate 192.168.10.254; sudo service ntpd start"
